@@ -1,31 +1,38 @@
-<script setup lang="ts">
-	// This starter template is using Vue 3 <script setup> SFCs
-	// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-	import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts" setup>
 </script>
 
 <template>
-	<div>
-		<a href="https://vitejs.dev" target="_blank">
-			<img src="/vite.svg" class="logo" alt="Vite logo" />
-		</a>
-		<a href="https://vuejs.org/" target="_blank">
-			<img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-		</a>
+	<div class='container'>
+		<main>
+			<router-view/>
+		</main>
+		<aside></aside>
+		<footer></footer>
 	</div>
-	<HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-	.logo {
-		height: 6em;
-		padding: 1.5em;
-		will-change: filter;
+<style lang='scss' scoped>
+	.container {
+		display: grid;
+		grid-template-areas: 'main aside' 'footer footer';
+		grid-template-rows: 1fr 100px;
+		grid-template-columns: 1fr 300px;
+		height: 100vh;
+		max-height: 100vh;
 	}
-	.logo:hover {
-		filter: drop-shadow(0 0 2em #646cffaa);
+
+	main {
+		grid-area: main;
+		max-height: 100%;
 	}
-	.logo.vue:hover {
-		filter: drop-shadow(0 0 2em #42b883aa);
+
+	aside {
+		grid-area: aside;
+		border-left: 1px solid var(--darker-grey) ;
+	}
+
+	footer {
+		grid-area: footer;
+		border-top: 1px solid var(--darker-grey) ;
 	}
 </style>
