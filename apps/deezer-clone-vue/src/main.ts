@@ -7,11 +7,11 @@ const router = createRouter({
 		{
 			path: '/playlists/:id',
 			//Code splitting -> Charger a l'appel de la route
-			component: import('./pages/PlayListView.vue'),
+			component: () =>  import('./pages/PlayListView.vue'),
 		},
 		{
 			path: '/',
-			component: import('./pages/PlayListListView.vue'),
+			component: () => import('./pages/PlayListListView.vue'),
 		},
 	],
 	history: createWebHistory(import.meta.env.BASE_URL),

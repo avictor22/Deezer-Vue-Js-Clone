@@ -3,7 +3,7 @@
 </script>
 
 <template>
-
+	<router-link to='/'>Back to Playlist</router-link>
 </template>
 
 
