@@ -1,8 +1,8 @@
 <script lang='ts' setup>
 
-	import { usePlaylist } from '../hooks'
+	import { usePlaylists } from '../hooks'
 
-	const { playlists, isLoading } = usePlaylist()
+	const { playlists, isLoading } = usePlaylists()
 
 </script>
 
