@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 	import { useQueryProvider } from 'vue-query';
+	import Player from './components/Player.vue'
 
 	useQueryProvider()
 
@@ -11,7 +12,9 @@
 			<router-view/>
 		</main>
 		<aside></aside>
-		<footer></footer>
+		<footer>
+			<Player/>
+		</footer>
 	</div>
 </template>
 
